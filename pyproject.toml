@@ -1,0 +1,21 @@
+[project]
+name         = "robot"
+description  = "Robot Arm Simulation"
+authors      = [{name = "Joshoua Bigler"}]
+version      = "1.0.0"
+dependencies = [
+  "sympy==1.13.1",
+  "matplotlib==3.9.3",
+  "scipy==1.14.1",
+  "numpy==2.2.0",
+  "torch==2.5.1",
+  "torchdiffeq==0.2.5",
+  "ipykernel==6.29.5",
+  "torchinfo==1.8.0"
+]
+
+[tool.setuptools]
+package-dir  = { "" = "." }
+packages = { find = { include = ["robot*"] } } 
+[tool.pytest.ini_options]
+testpaths = ["test"]
